@@ -1,0 +1,63 @@
+// 1. Import the initial variables
+@import "bulma.min";
+@import "luminous-basic.min";
+@import "../node_modules/bulma/sass/utilities/_all";
+@import url("http://fast.fonts.net/t/1.css?apiType=css&projectid=801d6d98-630f-4896-9ee6-eeac7aa4b3af");
+    @font-face{
+        font-family:"Garamond Classico";
+        src:url("../fonts/f1906d02-9385-4f23-8d9a-976490a9f239.eot?#iefix");
+        src:url("../fonts/f1906d02-9385-4f23-8d9a-976490a9f239.eot?#iefix") format("eot"),url("../fonts/7abcc233-ab72-4b71-af94-e33e7fe39b4a.woff2") format("woff2"),url("../fonts/eadb3fea-3381-429a-8e7b-83fb31a48cf6.woff") format("woff"),url("../fonts/ee099f4f-1603-48dc-b65a-8f1849762363.ttf") format("truetype");
+    }
+
+$head: "ShueiGoKinStd-B", "秀英角ゴシック銀 B", "Shuei KakuGo Gin B", sans-serif;
+$body: "ShueiMinPr6N-L", "Garamond Classico", "秀英明朝 L", "Shuei Mincho L", serif;
+.fullheight{
+	.columns{
+		margin: 0;
+		.column{
+			padding: 0;
+		}
+	}
+}
+body{
+	color: black;
+	a{
+		color: black;
+	}
+	font-family: $body;
+	p{
+		font-size: 0.8em;
+	}
+}
+h3{
+	font-family: $head;
+	margin-bottom: 0.5rem;
+}
+#topimg{
+	background: url("../img/top.jpg") center center;
+	background-size: cover;
+	margin: 2rem;
+}
+.titlecont{
+	padding: 5rem 0 5rem 3rem;
+	height: 100vh;
+	#title{
+		height: 1.5rem;
+		margin-bottom: 0.5rem;
+	}
+	p{
+		font-size: 0.9em;
+	}
+	position: relative;
+	.momobox{
+		position: absolute;
+		left: 3rem;
+		bottom: 4rem;
+		p{
+			font-size: 1.3em;
+		}
+		img{
+			width: 7rem;
+		}
+	}
+}
