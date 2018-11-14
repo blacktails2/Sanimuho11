@@ -3,61 +3,153 @@
 @import "luminous-basic.min";
 @import "../node_modules/bulma/sass/utilities/_all";
 @import url("http://fast.fonts.net/t/1.css?apiType=css&projectid=801d6d98-630f-4896-9ee6-eeac7aa4b3af");
-    @font-face{
-        font-family:"Garamond Classico";
-        src:url("../fonts/f1906d02-9385-4f23-8d9a-976490a9f239.eot?#iefix");
-        src:url("../fonts/f1906d02-9385-4f23-8d9a-976490a9f239.eot?#iefix") format("eot"),url("../fonts/7abcc233-ab72-4b71-af94-e33e7fe39b4a.woff2") format("woff2"),url("../fonts/eadb3fea-3381-429a-8e7b-83fb31a48cf6.woff") format("woff"),url("../fonts/ee099f4f-1603-48dc-b65a-8f1849762363.ttf") format("truetype");
-    }
 
-$head: "ShueiGoKinStd-B", "秀英角ゴシック銀 B", "Shuei KakuGo Gin B", sans-serif;
-$body: "ShueiMinPr6N-L", "Garamond Classico", "秀英明朝 L", "Shuei Mincho L", serif;
-.fullheight{
-	.columns{
+@font-face {
+	font-family: "Garamond Classico";
+	src: url("../fonts/f1906d02-9385-4f23-8d9a-976490a9f239.eot?#iefix");
+	src: url("../fonts/f1906d02-9385-4f23-8d9a-976490a9f239.eot?#iefix") format("eot"), url("../fonts/7abcc233-ab72-4b71-af94-e33e7fe39b4a.woff2") format("woff2"), url("../fonts/eadb3fea-3381-429a-8e7b-83fb31a48cf6.woff") format("woff"), url("../fonts/ee099f4f-1603-48dc-b65a-8f1849762363.ttf") format("truetype");
+}
+
+$head: "PShueiGoGinStdN-B",
+"秀英角ゴシック銀 B",
+"Shuei KakuGo Gin B",
+sans-serif;
+$body: "Garamond Classico",
+"ShueiMinPr6N-L",
+"秀英明朝 L",
+"Shuei Mincho L",
+serif;
+
+.fullheight {
+	.columns {
 		margin: 0;
-		.column{
+
+		.column {
 			padding: 0;
 		}
 	}
 }
-body{
+
+body {
 	color: black;
-	a{
+
+	a {
 		color: black;
 	}
+
 	font-family: $body;
-	p{
+
+	p {
 		font-size: 0.8em;
 	}
+
+	overflow: hidden;
+	padding: 0;
+	margin: 0;
 }
-h3{
+
+h3 {
 	font-family: $head;
 	margin-bottom: 0.5rem;
+	margin-top: 2rem;
 }
-#topimg{
+
+#topimg {
 	background: url("../img/top.jpg") center center;
 	background-size: cover;
 	margin: 2rem;
 }
-.titlecont{
+
+.centercont {
+	margin-top: 5rem;
+}
+
+.titlecont {
 	padding: 5rem 0 5rem 3rem;
 	height: 100vh;
-	#title{
+
+	#title {
 		height: 1.5rem;
 		margin-bottom: 0.5rem;
 	}
-	p{
+
+	p {
 		font-size: 0.9em;
 	}
+
 	position: relative;
-	.momobox{
+
+	.momobox {
 		position: absolute;
 		left: 3rem;
 		bottom: 4rem;
-		p{
+
+		p {
 			font-size: 1.3em;
 		}
-		img{
+
+		img {
 			width: 7rem;
 		}
+	}
+}
+
+.tile {
+	height: 25rem;
+	overflow: hidden;
+
+	img {
+		height: 100%;
+		width: 100%;
+		object-fit: cover;
+	}
+}
+
+a {
+	transition: ease all 0.4s;
+
+	&:hover {
+		opacity: 0.3;
+	}
+
+	p {
+		transition: ease all 0.4s;
+
+		&:hover {
+			opacity: 0.3;
+		}
+	}
+}
+
+footer {
+	text-align: center;
+	margin-top: 7rem;
+	font-family: $body;
+	font-size: 0.9em;
+}
+
+@include touch {
+	.fullheight {
+		height: auto;
+	}
+
+	#topimg {
+		height: 100vw;
+		margin: 1rem 1rem 0 1rem;
+	}
+
+	.momobox {
+		position: static !important;
+		margin-top: 3rem;
+	}
+	.titlecont{
+		padding: 3rem 1rem 0 1rem;
+		height: auto;
+	}
+	.centcont{
+		margin-top: 2rem;
+	}
+	.tile{
+		height: auto;
 	}
 }

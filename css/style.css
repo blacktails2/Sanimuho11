@@ -7288,20 +7288,27 @@ a.panel-block:hover, label.panel-block:hover {
 
 body {
   color: black;
-  font-family: "ShueiMinPr6N-L", "Garamond Classico", "秀英明朝 L", "Shuei Mincho L", serif; }
+  font-family: "Garamond Classico", "ShueiMinPr6N-L", "秀英明朝 L", "Shuei Mincho L", serif;
+  overflow: hidden;
+  padding: 0;
+  margin: 0; }
   body a {
     color: black; }
   body p {
     font-size: 0.8em; }
 
 h3 {
-  font-family: "ShueiGoKinStd-B", "秀英角ゴシック銀 B", "Shuei KakuGo Gin B", sans-serif;
-  margin-bottom: 0.5rem; }
+  font-family: "PShueiGoGinStdN-B", "秀英角ゴシック銀 B", "Shuei KakuGo Gin B", sans-serif;
+  margin-bottom: 0.5rem;
+  margin-top: 2rem; }
 
 #topimg {
   background: url("../img/top.jpg") center center;
   background-size: cover;
   margin: 2rem; }
+
+.centercont {
+  margin-top: 5rem; }
 
 .titlecont {
   padding: 5rem 0 5rem 3rem;
@@ -7320,3 +7327,43 @@ h3 {
       font-size: 1.3em; }
     .titlecont .momobox img {
       width: 7rem; }
+
+.tile {
+  height: 25rem;
+  overflow: hidden; }
+  .tile img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; }
+
+a {
+  transition: ease all 0.4s; }
+  a:hover {
+    opacity: 0.3; }
+  a p {
+    transition: ease all 0.4s; }
+    a p:hover {
+      opacity: 0.3; }
+
+footer {
+  text-align: center;
+  margin-top: 7rem;
+  font-family: "Garamond Classico", "ShueiMinPr6N-L", "秀英明朝 L", "Shuei Mincho L", serif;
+  font-size: 0.9em; }
+
+@media screen and (max-width: 1087px) {
+  .fullheight {
+    height: auto; }
+  #topimg {
+    height: 100vw;
+    margin: 1rem 1rem 0 1rem; }
+  .momobox {
+    position: static !important;
+    margin-top: 3rem; }
+  .titlecont {
+    padding: 3rem 1rem 0 1rem;
+    height: auto; }
+  .centcont {
+    margin-top: 2rem; }
+  .tile {
+    height: auto; } }
